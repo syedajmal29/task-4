@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          //Anonymous Function
+const findPalindromes = function(arr) {
+    function isPalindrome(str) {
+        let reversed = str.split("").reverse().join("");
+        return str === reversed;
+    }
+
+    let palindromes = arr.filter((str) => isPalindrome(str));
+    console.log(palindromes);
+};
+let arr = ["madam", "guvi", "world", "racecar"];
+findPalindromes(arr); 
+
+
+
+
+//IIFE Function
+(function (arr) {
+    function isPalindrome(str) {
+      let reversed = str.split("").reverse().join("");
+      return str === reversed;
+    }
+  
+    let palindromes = arr.filter((str) => isPalindrome(str));
+    console.log(palindromes);
+  })(["madam", "guvi", "world", "racecar"]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //h. Rotate an array by k times
+        // Anonymous Function
+
+var result = function(arr,k){
+    k = k % arr.length;
+    let rotate = arr.slice(k).concat(arr.slice(0, k));
+    console.log(rotate);
+  }
+  result([1,2,3,4,5],2);
+
+
+  //IIFE Function
+(function (arr, k) {
+    k = k % arr.length;
+    let rotate = arr.slice(k).concat(arr.slice(0, k));
+    console.log(rotate);
+  })([1, 2, 3, 4, 5], 2);
+
+    </script>
+</body>
+</html>
